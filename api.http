@@ -8,4 +8,8 @@ Content-Type: application/json
 
 ###
 
-GET http://localhost:3333/invites/user-123
+GET http://localhost:3333/invites/f3b3599b-f6cb-4fde-a924-295a54254bdf
+
+###
+
+GET http://localhost:3333/subscribers/f3b3599b-f6cb-4fde-a924-295a54254bdf/ranking/clicks
