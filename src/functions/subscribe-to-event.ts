@@ -1,12 +1,12 @@
 import { db } from '../drizzle/client'
 import { subscriptions } from '../drizzle/schema/subscriptions'
 
-type SubscribeToEvent = {
+type SubscribeToEventParams = {
   name: string
   email: string
 }
 
-export async function subscribeToEvent({ name, email }: SubscribeToEvent) {
+export async function subscribeToEvent({ name, email }: SubscribeToEventParams) {
   const result = await db
     .insert(subscriptions)
     .values({

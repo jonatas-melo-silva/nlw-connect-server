@@ -3,12 +3,13 @@ import { fastifySwagger } from '@fastify/swagger'
 import { fastifySwaggerUi } from '@fastify/swagger-ui'
 import { fastify } from 'fastify'
 import {
+  type ZodTypeProvider,
   jsonSchemaTransform,
   serializerCompiler,
   validatorCompiler,
-  ZodTypeProvider,
 } from 'fastify-type-provider-zod'
 import { env } from './env'
+import { accessInviteLinkRoute } from './routes/access-invite-link-route'
 import { subscribeToEventsRoute } from './routes/subscribe-to-events-route'
 
 const app = fastify().withTypeProvider<ZodTypeProvider>()
@@ -35,6 +36,7 @@ app.register(fastifySwaggerUi, {
 })
 
 app.register(subscribeToEventsRoute)
+app.register(accessInviteLinkRoute)
 
 app
   .listen({
