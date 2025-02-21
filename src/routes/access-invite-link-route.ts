@@ -15,9 +15,7 @@ export const accessInviteLinkRoute: FastifyPluginAsyncZod = async app => {
           subscriberId: z.string(),
         }),
         response: {
-          201: z.object({
-            subscriberId: z.string(),
-          }),
+          302: z.null(),
         },
       },
     },
@@ -30,7 +28,7 @@ export const accessInviteLinkRoute: FastifyPluginAsyncZod = async app => {
 
       redirectUrl.searchParams.set('referrer', subscriberId)
 
-      return reply.redirect(redirectUrl.toString(), 301)
+      return reply.redirect(redirectUrl.toString(), 302)
     }
   )
 }
