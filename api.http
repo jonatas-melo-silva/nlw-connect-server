@@ -13,3 +13,38 @@ GET http://localhost:3333/invites/f3b3599b-f6cb-4fde-a924-295a54254bdf
 ###
 
 GET http://localhost:3333/subscribers/f3b3599b-f6cb-4fde-a924-295a54254bdf/ranking/clicks
+
+###
+
+POST http://localhost:3333/subscriptions
+Content-Type: application/json
+
+{
+  "name": "Jane Doe",
+  "email": "janedoe@email.com",
+  "referrer": "f3b3599b-f6cb-4fde-a924-295a54254bdf"
+}
+
+###
+
+GET http://localhost:3333/subscribers/f3b3599b-f6cb-4fde-a924-295a54254bdf/ranking/count
+
+###
+
+GET http://localhost:3333/subscribers/f3b3599b-f6cb-4fde-a924-295a54254bdf/ranking/position
+
+###
+
+
+POST http://localhost:3333/subscriptions
+Content-Type: application/json
+
+{
+  "name": "Dudu Doe",
+  "email": "dududoe@email.com",
+  "referrer": "889a05a1-2717-4fad-8d2e-8c72f7750385"
+}
+
+###
+
+GET http://localhost:3333/ranking

@@ -20,6 +20,12 @@
     "bitnami",
     "hget",
     "hincrby",
-    "Jonatas"
-  ]
+    "Jonatas",
+    "WITHSCORES",
+    "zincrby",
+    "zrevrange",
+    "zrevrank",
+    "zscore"
+  ],
+  "typescript.tsdk": "node_modules/typescript/lib"
 }
